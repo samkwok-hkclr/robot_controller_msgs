@@ -1,0 +1,11 @@
+geometry_msgs/Pose[] waypoints
+
+float64 eef_step
+float64 jump_threshold
+
+float64 speed
+
+---
+
+bool success
+string message

@@ -1,0 +1,6 @@
+string key
+geometry_msgs/Pose pose
+bool is_mesh
+---
+bool success
+string message

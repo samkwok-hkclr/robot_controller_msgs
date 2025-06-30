@@ -1,0 +1,5 @@
+moveit_msgs/CollisionObject[] collision_objects
+moveit_msgs/ObjectColor[] object_colors
+---
+bool success
+string message

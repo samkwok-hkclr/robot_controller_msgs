@@ -1,0 +1,2 @@
+string object_id
+moveit_msgs/CollisionObject collision_object

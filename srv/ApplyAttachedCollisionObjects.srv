@@ -1,0 +1,4 @@
+moveit_msgs/AttachedCollisionObject[] attached_collision_objects
+---
+bool success
+string message

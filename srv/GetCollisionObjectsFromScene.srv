@@ -1,0 +1,6 @@
+string[] object_ids
+---
+bool success
+string message
+
+CollisionObjectMap[] id_map
