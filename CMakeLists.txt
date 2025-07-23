@@ -35,6 +35,7 @@ set(srv_files
   "srv/MoveCollisionObjects.srv"
   "srv/PushPoseArray.srv"
   "srv/RemoveCollisionObjects.srv"
+  "srv/RobotSpeed.srv"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
