@@ -1,0 +1,7 @@
+
+---
+
+bool success
+string message
+
+moveit_msgs/JointLimits[] joint_limits
