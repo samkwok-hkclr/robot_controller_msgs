@@ -20,6 +20,7 @@ set(action_files
 
 set(msg_files
   "msg/CollisionObjectMap.msg"
+  "msg/ExecutionState.msg"
   "msg/JointWaypoint.msg"
 )
 
