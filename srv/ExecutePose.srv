@@ -1,7 +1,15 @@
-geometry_msgs/Pose pose
+# --- Request ---
+geometry_msgs/Pose target_pose
+
+# Speed as a percentage in (0, 100]. Use 0 for the controller default.
 float64 speed
 
+# false: block until execution completes (default)
+# true : dispatch asynchronously and return once the goal is accepted
+bool async_execute
 ---
-
+# --- Response ---
 bool success
 string message
+moveit_msgs/RobotTrajectory trajectory
+moveit_msgs/MoveItErrorCodes error_code

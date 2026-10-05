@@ -1,8 +1,7 @@
-string joint_name
-
+# --- Request ---
+# Link / frame name. Empty string uses the configured end-effector link.
+string link_name
 ---
-
 bool success
 string message
-
 geometry_msgs/Pose pose

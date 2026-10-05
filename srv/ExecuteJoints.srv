@@ -1,8 +1,24 @@
+# --- Request ---
+# Move the arm to a single joint-space target.
+# joint_names is required; joint_positions must match the planning group's joint count
+# (and be in the same order). Names are used only for validation and diagnostics.
+
 string[] joint_names
-float64[] position
+float64[] joint_positions
+
+# Speed as a percentage in (0, 100]. Use 0 for the controller default.
 float64 speed
 
+# false: block until execution completes (default)
+# true : dispatch asynchronously and return once the goal is accepted
+bool async_execute
 ---
-
+# --- Response ---
 bool success
 string message
+
+# Planned trajectory (always filled when planning succeeded).
+moveit_msgs/RobotTrajectory trajectory
+
+# Underlying MoveIt2 error code. SUCCESS=1.
+moveit_msgs/MoveItErrorCodes error_code

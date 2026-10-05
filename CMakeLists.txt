@@ -20,6 +20,7 @@ set(action_files
 
 set(msg_files
   "msg/CollisionObjectMap.msg"
+  "msg/JointWaypoint.msg"
 )
 
 set(srv_files
@@ -30,9 +31,10 @@ set(srv_files
   "srv/ExecutePose.srv"
   "srv/ExecuteWaypoints.srv"
   "srv/GetCollisionObjectsFromScene.srv"
-  "srv/GetJointStates.srv"
-  "srv/GetPose.srv"
   "srv/GetJointLimits.srv"
+  "srv/GetJointStates.srv"
+  "srv/GetPlan.srv"
+  "srv/GetPose.srv"
   "srv/MoveCollisionObjects.srv"
   "srv/PushPoseArray.srv"
   "srv/RemoveCollisionObjects.srv"
@@ -42,7 +44,6 @@ set(srv_files
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
-  ${action_files}
   DEPENDENCIES
     builtin_interfaces
     std_msgs

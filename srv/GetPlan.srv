@@ -1,0 +1,32 @@
+# --- Request ---
+# Selects which target field is used.
+uint8 TARGET_JOINTS           = 0
+uint8 TARGET_POSE             = 1
+uint8 TARGET_JOINT_WAYPOINTS  = 2
+uint8 TARGET_POSE_WAYPOINTS   = 3
+
+uint8 target_type
+
+# For TARGET_JOINTS
+string[]  joint_names
+float64[] joint_positions
+
+# For TARGET_POSE
+geometry_msgs/Pose target_pose
+
+# For TARGET_JOINT_WAYPOINTS
+JointWaypoint[] joint_waypoints
+
+# For TARGET_POSE_WAYPOINTS
+geometry_msgs/Pose[] pose_waypoints
+float64              eef_step
+float64              jump_threshold
+
+# Speed as a percentage in (0, 100]. Use 0 for the controller default.
+float64 speed
+---
+# --- Response ---
+bool success
+string message
+moveit_msgs/RobotTrajectory trajectory
+moveit_msgs/MoveItErrorCodes error_code

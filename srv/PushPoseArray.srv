@@ -1,6 +1,4 @@
 geometry_msgs/PoseArray poses
-
 ---
-
 bool success
 string message

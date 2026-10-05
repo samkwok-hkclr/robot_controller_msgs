@@ -1,6 +1,8 @@
-string key
-geometry_msgs/Pose pose
-bool is_mesh
+# --- Request ---
+# Single object move. Kept for backwards compatibility.
+string                object_id
+geometry_msgs/Pose    pose
+bool                  is_mesh
 ---
 bool success
 string message

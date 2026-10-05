@@ -1,6 +1,17 @@
+# --- Request ---
+# Cartesian waypoints. Each waypoint is turned into a joint configuration via IK
+# and then planned to in joint space. Trajectory segments are concatenated.
 geometry_msgs/Pose[] waypoints
-float64 speed
----
 
+# Speed as a percentage in (0, 100]. Use 0 for the controller default.
+float64 speed
+
+# false: block until execution completes (default)
+# true : dispatch asynchronously and return once the goal is accepted
+bool async_execute
+---
+# --- Response ---
 bool success
 string message
+moveit_msgs/RobotTrajectory trajectory
+moveit_msgs/MoveItErrorCodes error_code
